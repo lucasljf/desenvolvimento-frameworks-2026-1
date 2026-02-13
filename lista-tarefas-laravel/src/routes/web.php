@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/ola-mundo', function () {
     return 'Olá, mundo!';
 });
+
+Route::get('/teste-view', function () {
+    return view('teste-view');
+});
