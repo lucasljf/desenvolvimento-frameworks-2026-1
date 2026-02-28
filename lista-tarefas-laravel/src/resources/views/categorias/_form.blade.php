@@ -1,7 +1,7 @@
 <div>
     <div>
         <label>Título</label>
-        <input name="titulo" value="{{ old('titulo', $tarefa->titulo ?? '') }}" required>
+        <input name="titulo" value="{{ old('titulo', $categoria->titulo ?? '') }}" required>
         @error('titulo') <div>{{ $message }}</div> @enderror
     </div>
 

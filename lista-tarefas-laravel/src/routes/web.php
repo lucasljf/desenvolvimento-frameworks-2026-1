@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TarefaController;
 
 Route::get('/', function () {
-    return redirect()->route('tarefas.index');
+    return redirect()->route('categorias.index');
 });
 
 Route::get('/ola-mundo', function () {
