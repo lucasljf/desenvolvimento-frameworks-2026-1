@@ -11,7 +11,7 @@
 </div>
 
 <div>
-    @forelse($categorias as $categoria)
+    @forelse($categoria as $categoria)
     <div>
         <div>
             <div>{{ $categoria->nome }}</div>

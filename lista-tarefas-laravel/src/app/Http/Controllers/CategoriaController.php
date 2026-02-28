@@ -12,8 +12,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categoria = Categorias::latest()->get();
-        return view('categorias.index', compact('categorias'));
+        $categoria = Categoria::latest()->get();
+        return view('categorias.index', compact('categoria'));
     }
 
     /**
