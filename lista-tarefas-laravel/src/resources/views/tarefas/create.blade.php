@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Nova tarefa')
+@section('header', 'Lista de Tarefas')
 
 @section('content')
 <div>
