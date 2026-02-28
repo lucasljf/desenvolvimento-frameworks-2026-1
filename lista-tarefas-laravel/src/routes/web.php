@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TarefaController;
+use App\Http\Controllers\TarefaCategoriaController;
 
 Route::get('/', function () {
     return redirect()->route('tarefas.index');
@@ -16,3 +17,4 @@ Route::get('/teste-view', function () {
 });
 
 Route::resource('tarefas', TarefaController::class);
+Route::resource('tarefas_categorias', TarefaCategoriaController::class);
