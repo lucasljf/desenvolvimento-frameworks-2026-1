@@ -16,3 +16,5 @@ Route::get('/teste-view', function () {
 });
 
 Route::resource('tarefas', TarefaController::class);
+
+Route::resource('categorias', CategoriaController::class);
