@@ -12,7 +12,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $tarefas = Categorias::lasted()->get();
+        $categoria = Categorias::latest()->get();
         return view('categorias.index', compact('categorias'));
     }
 
@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('categorias.create'); //<<-------- parei aqui
+        return view('categorias.create'); 
     }
 
     /**
@@ -31,13 +31,13 @@ class CategoriaController extends Controller
     {
         $dados = $request->validate([
             'nome' => ['required', 'string'],
-            'cor' => ['nulable', 'string']
+            'cor' => ['nulable', 'string'],
             'descricao' => ['nullable', 'string'],
         ]);
 
         Categoria::create($dados);
 
-        return redirect()->route('categorias.index')->with('ok', 'Categoria criada!')
+        return redirect()->route('categorias.index')->with('ok', 'Categoria criada!');
     }
 
     /**
@@ -63,13 +63,13 @@ class CategoriaController extends Controller
     {
         $dados = $request->validate([
             'nome' => ['required', 'string'],
-            'cor' => ['nulable', 'string']
+            'cor' => ['nulable', 'string'],
             'descricao' => ['nullable', 'string'],
         ]);
 
         $categoria->update($dados);
 
-        return redirect()->route('categorias.index')
+        return redirect()->route('categorias.index');
     }
 
     /**
