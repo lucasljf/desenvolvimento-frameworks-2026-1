@@ -10,7 +10,11 @@
 <body>
     <div>
         <header>
-            <h1>Lista de Tarefas</h1>
+            <h1>@yield('title', 'Lista de Tarefas')</h1>
+            <nav style="margin-top: 10px;">
+                <a href="{{ route('tarefas.index') }}" style="margin-right: 20px;">📋 Tarefas</a>
+                <a href="{{ route('tarefas_categorias.index') }}">🏷️ Categorias</a>
+            </nav>
         </header>
     </div>
 

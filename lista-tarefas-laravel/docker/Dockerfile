@@ -29,4 +29,9 @@ WORKDIR /var/www/html
 RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache \
   && chown -R appuser:appgroup /var/www/html
 
-USER appuser
+# Copia e configura o entrypoint
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Mantém como root para o entrypoint executar composer install
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
