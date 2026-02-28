@@ -10,7 +10,7 @@
 <body>
     <div>
         <header>
-            <h1>Lista de Tarefas</h1>
+            <h1>Lista de Categorias</h1>
         </header>
     </div>
 
