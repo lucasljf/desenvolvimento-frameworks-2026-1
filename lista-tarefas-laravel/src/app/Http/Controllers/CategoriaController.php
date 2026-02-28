@@ -78,6 +78,6 @@ class CategoriaController extends Controller
     public function destroy(Categoria $categoria)
     {
         $categoria->delete();
-        return redirect()->route('tarefas.index')-with('ok', 'Tarefas removida');
+        return redirect()->route('categoria.index')-with('ok', 'Categoria removida');
     }
 }
