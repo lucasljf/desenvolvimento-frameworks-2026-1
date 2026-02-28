@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Lista de Tarefas')</title>
+    {{-- O título do navegador será o definido na view --}}
+    <title>@yield('title', 'Categorias')</title>
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <header>
-            <h1>Lista de Tarefas</h1>
+            {{-- Se a view definir um título, use; senão, padrão "Categorias" --}}
+            <h1>@yield('title', 'Categorias')</h1>
         </header>
-    </div>
 
-    @if(session('ok'))
-    <div>
-        {{ session('ok') }}
-    </div>
-    @endif
+        {{-- Mensagem de sucesso --}}
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
 
-    @yield('content')
+        {{-- Conteúdo da view --}}
+        @yield('content')
+    </div>
 </body>
 
 </html>
