@@ -10,7 +10,11 @@
 <body>
     <div>
         <header>
-            <h1>Lista de Tarefas</h1>
+            <h1>@yield('header', 'Lista de Tarefas')</h1>
+            <nav>
+                <a href="{{ route('tarefas.index') }}">Tarefas</a> | 
+                <a href="{{ route('categorias.index') }}">Categorias</a>
+            </nav>
         </header>
     </div>
 
